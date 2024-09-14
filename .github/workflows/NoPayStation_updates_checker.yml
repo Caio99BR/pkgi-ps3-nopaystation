@@ -39,11 +39,10 @@ jobs:
           cat output/pkgi_avatars_pending.csv >> output/pkgi_games_all.csv
       - name: ⚙️ List all changed files
         id: changed-files
-        uses: tj-actions/changed-files@v45
+        uses: tj-actions/changed-files@v45.0.1
         with:
           files: |
-            input/**  
-            output/**
+            {input,output}/**
       - name: "🛠️ Debug: Print tj-actions/changed-files outputs"
         run: |
           echo "${{ toJson(steps.changed-files.outputs) }}" 
