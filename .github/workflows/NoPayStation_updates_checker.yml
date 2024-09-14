@@ -26,11 +26,17 @@ jobs:
       - name: 🔨 Find NoPayStation updates
         run: |
           python convert_nopaystation_to_pkgi.py
-          cat output/pkgi_games.csv output/pkgi_games_pending.csv > output/pkgi_games_all.csv
-          cat output/pkgi_dlcs.csv output/pkgi_dlcs_pending.csv > output/pkgi_dlcs_all.csv
-          cat output/pkgi_demos.csv output/pkgi_demos_pending.csv > output/pkgi_demos_all.csv
-          cat output/pkgi_themes.csv output/pkgi_themes_pending.csv > output/pkgi_themes_all.csv
-          cat output/pkgi_avatars.csv output/pkgi_avatars_pending.csv > output/pkgi_games_all.csv
+          rm -rf output/pkgi_games_all.csv output/pkgi_dlcs_all.csv output/pkgi_demos_all.csv output/pkgi_themes_all.csv output/pkgi_games_all.csv
+          cat output/pkgi_games.csv >> output/pkgi_games_all.csv
+          cat output/pkgi_games_pending.csv >> output/pkgi_games_all.csv
+          cat output/pkgi_dlcs.csv >> output/pkgi_dlcs_all.csv
+          cat output/pkgi_dlcs_pending.csv >> output/pkgi_dlcs_all.csv
+          cat output/pkgi_demos.csv >> output/pkgi_demos_all.csv
+          cat output/pkgi_demos_pending.csv >> output/pkgi_demos_all.csv
+          cat output/pkgi_themes.csv >> output/pkgi_themes_all.csv
+          cat output/pkgi_themes_pending.csv >> output/pkgi_themes_all.csv
+          cat output/pkgi_avatars.csv >> output/pkgi_games_all.csv
+          cat output/pkgi_avatars_pending.csv >> output/pkgi_games_all.csv
       - name: ⚙️ List all changed files
         id: changed-files
         uses: tj-actions/changed-files@v45
