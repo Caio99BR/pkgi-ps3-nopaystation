@@ -31,3 +31,15 @@ url_demo https://github.com/jy95/pkgi-ps3-nopaystation/releases/download/latest/
 url_themes https://github.com/jy95/pkgi-ps3-nopaystation/releases/download/latest/pkgi_themes_pending.csv
 url_avatars https://github.com/jy95/pkgi-ps3-nopaystation/releases/download/latest/pkgi_avatars_pending.csv
 ```
+
+Or if you want everything from NoPaystation (approved+pending), put the suffix `_all` before the `.csv` extension like that in `config.txt` :
+
+```txt
+language en
+dl_mode_background 1
+url_games https://github.com/Caio99BR/pkgi-ps3-nopaystation/releases/download/latest/pkgi_games_all.csv
+url_dlcs https://github.com/Caio99BR/pkgi-ps3-nopaystation/releases/download/latest/pkgi_dlcs_all.csv
+url_demo https://github.com/Caio99BR/pkgi-ps3-nopaystation/releases/download/latest/pkgi_demos_all.csv
+url_themes https://github.com/Caio99BR/pkgi-ps3-nopaystation/releases/download/latest/pkgi_themes_all.csv
+url_avatars https://github.com/Caio99BR/pkgi-ps3-nopaystation/releases/download/latest/pkgi_avatars_all.csv
+```
